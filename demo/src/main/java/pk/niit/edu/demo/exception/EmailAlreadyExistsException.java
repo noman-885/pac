@@ -1,0 +1,8 @@
+package pk.niit.edu.demo.exception;
+
+public class EmailAlreadyExistsException extends RuntimeException{
+    public EmailAlreadyExistsException(String message){
+        super(message);
+    }
+
+}
