@@ -68,8 +68,17 @@ public class UserController {
             return ResponseEntity.ok("User Deleted successfully!");
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found!");
+
+    }
+    @DeleteMapping("id/{id}")
+    public ResponseEntity<String> haseebUser(@PathVariable Integer id){
+        boolean deletedUser = userService.deleteUser(id);
+
+        if(deletedUser){
+            return ResponseEntity.ok("User Deleted successfully!");
+        }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found!");
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found!");
+
     }
 
 
